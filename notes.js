@@ -48,5 +48,16 @@ Accessibility:
 
 /*
 https://api.artic.edu/docs/#quick-start
+https://github.com/cheatsnake/emojihub
+https://php-noise.com/
+https://docs.api.bible/
+https://holidayapi.com/
+https://agify.io/
+https://genderize.io/
+https://glitterly.app/
+https://cloud.ibm.com/docs/text-to-speech/getting-started.html
+https://nationalize.io/
+https://imgflip.com/api
+https://github.com/sameerkumar18/corporate-bs-generator-api
 
 */
