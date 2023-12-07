@@ -1,4 +1,4 @@
-const url = `https://api.quotable.io/randoms`;
+const url = `https://rickandmortyapi.com/api/character`;
 async function getData(url) {
     try {
         const response = await fetch(url);
@@ -11,9 +11,8 @@ async function getData(url) {
     } catch (error) {
         document.querySelector("h1").textContent = "";
     }
+ }
 
-    }
-}
 
 /*
 Array Methods: 
@@ -59,5 +58,7 @@ https://cloud.ibm.com/docs/text-to-speech/getting-started.html
 https://nationalize.io/
 https://imgflip.com/api
 https://github.com/sameerkumar18/corporate-bs-generator-api
-
+https://country.is/
+https://isitwater.com/
+https://chroniclingamerica.loc.gov/about/api/
 */
