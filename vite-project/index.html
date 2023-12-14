@@ -8,6 +8,7 @@
   </head>
   <body class="main">
     <div class="main-input-form">
+      <h2 class="form-section-header" id="characters-header">Characters:</h2>
       <div class="main-input-form-characters">
         <form action="" class="form" id="formCharacters">
           <div class="q-character-name">
@@ -23,18 +24,30 @@
             <input type="text" name="characterSpecies" class="q-character-species-input"><br>
           </div>
           <div class="q-character-gender">
-
+            <label for="characterGender" class="q-character-gender-label">Gender</label><br>
+            <input type="text" name="characterGender" class="q-character-gender-input">
           </div>
           <div class="q-character-location">
-
+            <label for="characterLocation" class="q-character-location-label">Gender</label><br>
+            <input type="text" name="characterLocation" class="q-character-location-input">
           </div>
         </form>
       </div>
+      <h2 class="form-section-header" id="locations-header">Locations:</h2>
       <div class="main-input-form-locations">
         <form action="" class="form" id="formLocations">
-          <div class="q-location-name"></div>
-          <div class="q-location-type"></div>
-          <div class="q-location-dimension"></div>
+          <div class="q-location-name">
+            <label for="locationName" class="q-location-name-label">Name</label><br>
+            <input type="text" name="locationName" class="q-location-name-input">
+          </div>
+          <div class="q-location-type">
+            <label for="locationType" class="q-location-type-label">Type</label><br>
+            <input type="text" name="locationType" class="q-location-type-input">
+          </div>
+          <div class="q-location-dimension">
+            <label for="locationDimension" class="q-location-dimension-label">Dimension</label><br>
+            <input type="text" name="locationDimension" class="q-location-dimension-input">
+          </div>
         </form>
       </div>
     </div>
