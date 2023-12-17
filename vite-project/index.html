@@ -7,55 +7,63 @@
     <title>API Project - Batyrkhan Alimzhanov</title>
   </head>
   <body class="main">
+    <div class="main-header">
+      <div class="main-header-text">
+        <h1 class="main-header-title">Bat's Rick and Morty Repository</h1>
+        <p class="main-header-description">The Best Guide</p>
+      </div>
+      
+    </div>
     <div class="main-input-form">
+      <h2 class="form-section-header" id="themes-header"></h2>
+      <div class="main-input-form-buttons-theme">
+        button.theme-button
+      </div>
       <h2 class="form-section-header" id="characters-header">Characters:</h2>
       <div class="main-input-form-characters">
         <form action="" class="form" id="formCharacters">
           <div class="q-character-name">
-            <label for="characterName" class="q-character-name-label">Character</label><br>
-            <input type="text" name="characterName" class="q-character-name-input"><br>
+            <label for="characterName" class="q-character-label" id="q-character-name-label">Name</label><br>
+            <input type="text" name="characterName" class="q-character-input" id="q-character-name-input"><br>
           </div>
           <div class="q-character-status">
-            <label for="characterStatus" class="q-character-status-label">Status</label><br>
-            <input type="text" name="characterStatus" class="q-character-status-input"><br>
+            <label for="characterStatus" class="q-character-label" id="q-character-status-label">Status</label><br>
+            <input type="text" name="characterStatus" class="q-character-input" id="q-character-status-input"><br>
           </div>
           <div class="q-character-species">
-            <label for="characterSpecies" class="q-character-species-label">Species</label><br>
-            <input type="text" name="characterSpecies" class="q-character-species-input"><br>
+            <label for="characterSpecies" class="q-character-label" id="q-character-species-label">Specie</label><br>
+            <input type="text" name="characterSpecies" class="q-character-input" id="q-character-species-input"><br>
           </div>
           <div class="q-character-gender">
-            <label for="characterGender" class="q-character-gender-label">Gender</label><br>
-            <input type="text" name="characterGender" class="q-character-gender-input">
+            <label for="characterGender" class="q-character-label" id="q-character-gender-label">Gender</label><br>
+            <input type="text" name="characterGender" class="q-character-input" id="q-character-gender-input">
           </div>
           <div class="q-character-location">
-            <label for="characterLocation" class="q-character-location-label">Location</label><br>
-            <input type="text" name="characterLocation" class="q-character-location-input">
-          </div>
-          <div class="q-character-submit">
-            <label for="characterLocation" class="q-character-location-label">Location</label><br>
-            <input type="text" name="characterLocation" class="q-character-location-input">
-          </div>
+            <label for="characterLocation" class="q-character-label" id="q-character-location-label">Location</label><br>
+            <input type="text" name="characterLocation" class="q-character-input" id="q-character-location-input">
+          <input type="submit" class="character-submit" id="q-character-submit" value="SUBMIT" id="submit">
         </form>
       </div>
       <h2 class="form-section-header" id="locations-header">Locations:</h2>
       <div class="main-input-form-locations">
         <form action="" class="form" id="formLocations">
           <div class="q-location-name">
-            <label for="locationName" class="q-location-name-label">Name</label><br>
-            <input type="text" name="locationName" class="q-location-name-input">
+            <label for="locationName" class="q-location-label" id="q-location-name-label">Name</label><br>
+            <input type="text" name="locationName" class="q-location-input" id="q-location-name-input">
           </div>
           <div class="q-location-type">
-            <label for="locationType" class="q-location-type-label">Type</label><br>
-            <input type="text" name="locationType" class="q-location-type-input">
+            <label for="locationType" class="q-location-label" id="q-location-type-label">Type</label><br>
+            <input type="text" name="locationType" class="q-location-input" id="q-location-type-input">
           </div>
           <div class="q-location-dimension">
-            <label for="locationDimension" class="q-location-dimension-label">Dimension</label><br>
-            <input type="text" name="locationDimension" class="q-location-dimension-input">
+            <label for="locationDimension" class="q-location-label" id="q-location-dimension-label">Dimension</label><br>
+            <input type="text" name="locationDimension" class="q-location-input" id="q-location-dimension-input">
           </div>
+          <input type="submit" class="location-submit" id="q-location-submit" value="SUBMIT" id="submit">
         </form>
       </div>
     </div>
-    <div id="app"></div>
+    <div id="main-output-card"></div>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
