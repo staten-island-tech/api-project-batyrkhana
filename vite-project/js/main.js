@@ -35,19 +35,23 @@ async function getLocnData(locnURL) {
                 throw new Error(response.status + ". Idk what to tell you, try searching for this error on the web.");
             };
         }; 
+        const locationDataArray = [];
         console.log(response);
+        //try to save a json response as an array
         const locationData = await response.json();
         console.log(locationData.results);
+        const dataNew = locationDataArray.push(locationData.results);
+        console.log(dataNew);
     } catch (error) {
         console.log("Oh no you got the following error! " + error);
     };
 };
-function createCard(){
+function createCharacterCard(characterData){
     DOMSelectors.mainOutput.insertAdjacentHTML("beforeend",
     `<div class="created-card">
       <img src=${characterData.image} alt="Album Cover" class="card-img">
-      <h1 class="card-albumName">${DOMSelectors.albumName.value}</h1>
-      <h2 class="card-release">${DOMSelectors.albumReleaseDate.value}</h2>
+      <h1 class="card-albumName">${DOMSelectors.characterData.value}</h1>
+      <h2 class="card-release">${DOMSelectors.char.value}</h2>
       <h3 class="card-artist">${DOMSelectors.albumArtist.value}</h3>
       <button class="delete">DELETE</button>
     </div>`);
@@ -89,3 +93,5 @@ DOMSelectors.locationsForm.addEventListener('submit', function locationsURLConve
     clearLocationsInput();
     //createCard();
 });
+
+//locationData.forEach((location)=>createCharacterCard(location));
