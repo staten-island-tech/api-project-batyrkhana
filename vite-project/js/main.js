@@ -1,6 +1,8 @@
 import "../styles/style.css";
 import { DOMSelectors } from "./dom";
 
+const characterDataArray = [];
+
 //Gets the URL from the URL Coverter function to get the data from the API.
 async function getCharData(charURL) {
     try {
@@ -18,6 +20,9 @@ async function getCharData(charURL) {
         console.log(response);
         const characterData = await response.json();
         console.log(characterData.results);
+        characterData.results.forEach(character => characterDataArray.push(character));
+        console.log(characterDataArray)
+        //do foreach on each data and push it
     } catch (error) {
         console.log("Oh no you got the following error! " + error);
     };
@@ -35,11 +40,16 @@ async function getLocnData(locnURL) {
                 throw new Error(response.status + ". Idk what to tell you, try searching for this error on the web.");
             };
         }; 
-        const locationDataArray = [];
         console.log(response);
-        //try to save a json response as an array
         const locationData = await response.json();
         console.log(locationData.results);
+        location
+        //const locationDataArray = [];
+        //try to save a json response as an array
+        
+        locationData.results.array.forEach(element => {
+            console.log(element)
+        });
         const dataNew = locationDataArray.push(locationData.results);
         console.log(dataNew);
     } catch (error) {
