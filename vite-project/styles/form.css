@@ -1,3 +1,94 @@
 @import url(header.css);
 @import url(output.css);
 @import url(style.css);
+
+.main-characters,
+.main-locations {
+    background-color: beige;
+    margin: 2rem;
+}
+.character-submit {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-top: 3.7rem;
+}
+  
+.character-submit:hover {
+    background-color: green;
+}
+.main-input-form {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.location-submit {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    margin-top: 12rem;
+  }
+  
+.location-submit:hover {
+    background-color: green;
+}
+
+.inputfieldImg {
+    position: relative;
+    display: flex;
+}
+.main-characters,
+.main-locations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between inputs */
+    border: .1rem solid #ccc;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: 48.7vw;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  }
+  /* Adjusted input field image styles */
+  .inputfieldImg {
+    position: relative;
+    display: flex;
+    width: 30rem; /* Ensure it takes the full width */
+  }
+
+.form-section-header {
+    font-size: 2.5rem;
+}
+.q-character-label, .q-location-label {
+    font-size: 1.3rem;
+}
+.character-inputField , .location-inputField{
+    margin-top: 1rem;
+}
+.q-character-input, .q-location-input{
+    height: 1.8rem;
+    font-size: 1.2rem;
+    width: 12rem;
+}
+.inputfieldImg2 {
+    width: 37rem;
+}
+.inputfieldImg3 {  
+    position: relative;
+    display: flex;
+    width: 66rem; /* Ensure it takes the full width */
+}
+.inputfieldImg, .inputfieldImg2, .inputfieldImg3 {
+    border-radius: .5rem;
+}

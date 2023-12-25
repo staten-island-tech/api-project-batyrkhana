@@ -1,3 +1,57 @@
 @import url(form.css);
 @import url(header.css);
 @import url(style.css);
+
+.created-character-card img {
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.created-character-card{
+    position: relative;
+}
+.created-character-name {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.created-character-gender,
+.created-character-location,
+.created-character-origin-name,
+.created-character-status,
+.created-character-species,
+.created-character-type {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.delete {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #d43f23;
+}
+
+#main-output-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.created-character-card {
+    border: .1rem solid #ccc;
+    border-radius: .5rem;
+    background-color: beige;
+    padding: 1rem;
+    margin: 1rem;
+    width: 30rem;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+}
