@@ -1,8 +1,5 @@
 @import url(header.css);
 @import url(output.css);
-<<<<<<< Updated upstream
-@import url(style.css);
-=======
 @import url(style.css);
 @import url(mediaq.css);
 .main-characters,
@@ -101,7 +98,6 @@
     .main-locations {
         margin: 1rem;
         flex-wrap: nowrap;
-
     }
     .inputfieldImg, .inputfieldImg2, .inputfieldImg3 {
         width: 100%;
@@ -211,4 +207,3 @@
         width: 100%;
     }
 }
->>>>>>> Stashed changes

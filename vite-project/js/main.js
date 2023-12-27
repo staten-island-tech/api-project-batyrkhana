@@ -2,10 +2,8 @@ import "../styles/style.css";
 import { DOMSelectors } from "./dom";
 
 const characterDataArray = [];
+const locationDataArray = [];
 
-<<<<<<< Updated upstream
-//Gets the URL from the URL Coverter function to get the data from the API.
-=======
 /* 
 async function getCharData - What it does:
 1. Grabs the URL from the URL Converter function to extract API data.
@@ -15,7 +13,6 @@ async function getCharData - What it does:
 5. After the cards have been created, clears the characterDataArray, setting it equal to 0.
 
 */
->>>>>>> Stashed changes
 async function getCharData(charURL) {
     try {
         //Looks at the status value and produces error messages based on it.
@@ -33,17 +30,12 @@ async function getCharData(charURL) {
         const characterData = await response.json();
         console.log(characterData.results);
         characterData.results.forEach(character => characterDataArray.push(character));
-<<<<<<< Updated upstream
-        console.log(characterDataArray)
-        //do foreach on each data and push it
-=======
         console.log(characterDataArray) //Status on characterDataArray API data insert
 
         characterDataArray.forEach((character) => createCharacterCard(character));
         console.log("Character Card Created"); // Status on characterDataArray cards creation
         characterDataArray.length = 0;
         console.log(characterDataArray); // Status on cleared Data Array
->>>>>>> Stashed changes
     } catch (error) {
         console.log("Oh no you got the following error! " + error);
     };
@@ -63,18 +55,6 @@ async function getLocnData(locnURL) {
         }; 
         console.log(response); //Status for the response
         const locationData = await response.json();
-<<<<<<< Updated upstream
-        console.log(locationData.results);
-        location
-        //const locationDataArray = [];
-        //try to save a json response as an array
-        
-        locationData.results.array.forEach(element => {
-            console.log(element)
-        });
-        const dataNew = locationDataArray.push(locationData.results);
-        console.log(dataNew);
-=======
         console.log(locationData.results); //Status on the API data retrieval
         locationData.results.forEach(location => locationDataArray.push(location));
         console.log(locationDataArray) //Status on locationDataArray API data insert
@@ -83,22 +63,10 @@ async function getLocnData(locnURL) {
         console.log("Location Card Created"); //Status on locationDataArray cards creation
         locationDataArray.length = 0;
         console.log(locationDataArray); // Status on cleared Data Array
->>>>>>> Stashed changes
     } catch (error) {
         console.log("Oh no you got the following error! " + error);
     };
 };
-<<<<<<< Updated upstream
-function createCharacterCard(characterData){
-    DOMSelectors.mainOutput.insertAdjacentHTML("beforeend",
-    `<div class="created-card">
-      <img src=${characterData.image} alt="Album Cover" class="card-img">
-      <h1 class="card-albumName">${DOMSelectors.characterData.value}</h1>
-      <h2 class="card-release">${DOMSelectors.char.value}</h2>
-      <h3 class="card-artist">${DOMSelectors.albumArtist.value}</h3>
-      <button class="delete">DELETE</button>
-    </div>`);
-=======
 const createCharacterCard = function(characterDataArray){
     if (characterDataArray.type === "") {characterDataArray.type = "unknown"};
     DOMSelectors.mainOutput.insertAdjacentHTML("afterbegin",
@@ -122,7 +90,6 @@ const createCharacterCard = function(characterDataArray){
             </div>
         </div>
     </div>`)
->>>>>>> Stashed changes
 };
 const createLocationCard = function(locationDataArray){
   DOMSelectors.mainOutput.insertAdjacentHTML("afterbegin",
@@ -174,8 +141,6 @@ function clearInputs() {
     DOMSelectors.locationsType.value = "";
     DOMSelectors.locationsDimension.value = "";
 };
-<<<<<<< Updated upstream
-=======
 DOMSelectors.mainOutput.addEventListener('click', function (event) {
   if (event.target.classList.contains('deleteCharacterBtn')) {
     if (!confirm("Do you really want to do this?")) {
@@ -209,7 +174,6 @@ DOMSelectors.mainOutput.addEventListener('click', function (event) {
       }
   }
 });
->>>>>>> Stashed changes
 // Takes the values of the individual user input fields and adds them as URL parameters.
 // encodeURIComponent ensures that the replaced URL parameters would not interfere in the functionality of the URL
 DOMSelectors.characterForm.addEventListener('submit', function characterURLConverter(submitCharacter) {
@@ -222,12 +186,7 @@ DOMSelectors.characterForm.addEventListener('submit', function characterURLConve
     const charLocation = encodeURIComponent(DOMSelectors.characterLocation.value);
     const charURL = `https://rickandmortyapi.com/api/character/?page=${charPageNum}&name=${charName}&status=${charStatus}&species=${charSpecies}&gender=${charGender}&location=${charLocation}`;
     getCharData(charURL);
-<<<<<<< Updated upstream
-    clearCharacterInput();
-    //createCard();
-=======
     clearInputs();
->>>>>>> Stashed changes
 });
 DOMSelectors.locationsForm.addEventListener('submit', function locationsURLConverter(submitLocation) {
     submitLocation.preventDefault();
@@ -235,16 +194,9 @@ DOMSelectors.locationsForm.addEventListener('submit', function locationsURLConve
     const locnName = encodeURIComponent(DOMSelectors.locationsName.value);
     const locnType = encodeURIComponent(DOMSelectors.locationsType.value);
     const locnDimension = encodeURIComponent(DOMSelectors.locationsDimension.value);
-<<<<<<< Updated upstream
-    const locnURL = `https://rickandmortyapi.com/api/location/?page=&name=${locnName}&type=${locnType}&dimension${locnDimension}`;
-    getLocnData(locnURL);
-    clearLocationsInput();
-    //createCard();
-=======
     const locnURL = `https://rickandmortyapi.com/api/location/?page=${locnPageNum}&name=${locnName}&type=${locnType}&dimension${locnDimension}`;
-    getLocationData(locnURL);
+    getLocnData(locnURL);
     clearInputs();
->>>>>>> Stashed changes
 });
 
 //locationData.forEach((location)=>createCharacterCard(location));

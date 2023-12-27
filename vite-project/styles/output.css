@@ -1,8 +1,5 @@
 @import url(form.css);
 @import url(header.css);
-<<<<<<< Updated upstream
-@import url(style.css);
-=======
 @import url(style.css);
 @import url(mediaq.css);
 
@@ -75,12 +72,12 @@
 }
 @media screen and (max-width: 1719px) {
     .created-character-card, .created-location-card {
-        width: calc(24vw - 2.5rem);
+        width: calc(25.4vw - 2.5rem);
     }
 }
 @media screen and (max-width: 1190px) {
     .created-character-card, .created-location-card {
-        width: calc(30vw - 2.5rem);
+        width: calc(33.5vw - 2.5rem);
     }
 }
 @media screen and (max-width: 910px) {
@@ -93,4 +90,3 @@
         width: calc(100vw - 2.5rem);
     }
 }
->>>>>>> Stashed changes
