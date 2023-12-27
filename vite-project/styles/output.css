@@ -1,16 +1,17 @@
 @import url(form.css);
 @import url(header.css);
 @import url(style.css);
+@import url(mediaq.css);
 
 .created-character-card img {
     width: 100%;
     border-radius: .5rem;
     margin-bottom: 1rem;
 }
-.created-character-card{
+.created-character-card, .created-location-card{
     position: relative;
 }
-.created-character-name {
+.created-character-name, .created-location-name {
     font-size: 2rem;
     margin-bottom: .5rem;
 }
@@ -20,13 +21,16 @@
 .created-character-origin-name,
 .created-character-status,
 .created-character-species,
-.created-character-type {
+.created-character-type,
+.created-location-name,
+.created-location-type,
+.created-location-dimension {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: black;
 }
 
-.delete {
+.deleteCharacterBtn, .infoCharacterBtn, .deleteLocationBtn, .infoLocationBtn {
     background-color: black;
     color: white;
     border: none;
@@ -36,22 +40,54 @@
     font-size: 1.5rem;
     transition: background-color 0.3s ease;
 }
+.deleteCharacterBtn, .deleteLocationBtn {
+    margin-right: .5rem;
+}
+.infoCharacterBtn, .infoLocationBtn {
+    margin-left: .5rem;
+}
 
-.delete:hover {
+.deleteCharacterBtn:hover, .deleteLocationBtn:hover {
     background-color: #d43f23;
 }
 
-#main-output-card {
+#main-output-card, .created-character-btns, .created-location-btns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: left;
     flex-wrap: wrap;
 }
-.created-character-card {
+.created-character-card, .created-location-card {
     border: .1rem solid #ccc;
     border-radius: .5rem;
     background-color: beige;
     padding: 1rem;
     margin: 1rem;
-    width: 30rem;
+    width: 32.4rem;
     box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
 }
+#main-output-card {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1719px) {
+    .created-character-card, .created-location-card {
+        width: calc(25.4vw - 2.5rem);
+    }
+}
+@media screen and (max-width: 1190px) {
+    .created-character-card, .created-location-card {
+        width: calc(33.5vw - 2.5rem);
+    }
+}
+@media screen and (max-width: 910px) {
+    .created-character-card, .created-location-card {
+        width: calc(50vw - 2.5rem);
+    }
+}
+@media screen and (max-width: 650px){
+    .created-character-card, .created-location-card {
+        width: calc(100vw - 2.5rem);
+    }
+}
+

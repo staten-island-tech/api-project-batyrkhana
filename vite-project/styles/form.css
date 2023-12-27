@@ -1,11 +1,12 @@
 @import url(header.css);
 @import url(output.css);
 @import url(style.css);
-
+@import url(mediaq.css);
 .main-characters,
 .main-locations {
     background-color: beige;
     margin: 2rem;
+    flex-wrap: nowrap;
 }
 .character-submit {
     background-color: black;
@@ -24,7 +25,6 @@
 }
 .main-input-form {
     display: flex;
-    justify-content: left;
     flex-wrap: wrap;
 }
 .location-submit {
@@ -43,10 +43,6 @@
     background-color: green;
 }
 
-.inputfieldImg {
-    position: relative;
-    display: flex;
-}
 .main-characters,
 .main-locations {
     display: flex;
@@ -60,13 +56,6 @@
     width: 48.7vw;
     box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
   }
-  /* Adjusted input field image styles */
-  .inputfieldImg {
-    position: relative;
-    display: flex;
-    width: 30rem; /* Ensure it takes the full width */
-  }
-
 .form-section-header {
     font-size: 2.5rem;
 }
@@ -82,7 +71,9 @@
     width: 12rem;
 }
 .inputfieldImg2 {
-    width: 37rem;
+    position: relative;
+    display: flex;
+    width: 80%;
 }
 .inputfieldImg3 {  
     position: relative;
@@ -91,4 +82,128 @@
 }
 .inputfieldImg, .inputfieldImg2, .inputfieldImg3 {
     border-radius: .5rem;
+}
+
+@media screen and (max-width: 1719px) {
+    .main-characters,
+    .main-locations {
+      flex-direction: row; 
+      width: calc(50vw - 2.5rem); 
+      display: flex;
+    }
+    .main-characters {
+        margin: 1rem;
+        flex-wrap: nowrap;
+    }
+    .main-locations {
+        margin: 1rem;
+        flex-wrap: nowrap;
+    }
+    .inputfieldImg, .inputfieldImg2, .inputfieldImg3 {
+        width: 100%;
+        max-height: 40rem;
+        overflow-x: hidden;
+    }
+    .q-character-input, .q-location-input{
+        height: 1.8rem;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    .main-input-form{
+        align-items: center;
+        margin: .5rem;
+    }
+    .location-submit, .character-submit {
+        margin-top: .5rem;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .main-characters,
+    .main-locations {
+      flex-direction: row; 
+      width: 100vw; 
+      display: flex;
+    }
+    .main-characters {
+        margin: 1rem;
+        flex-wrap: nowrap;
+    }
+    .main-locations {
+        margin: 1rem;
+        flex-wrap: nowrap;
+
+    }
+    .inputfieldImg, .inputfieldImg2, .inputfieldImg3 {
+        width: 100%;
+        max-height: 100%;
+    }
+    .q-character-input, .q-location-input{
+        height: 1.8rem;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    .main-input-form{
+        align-items: center;
+        margin: .5rem;
+    }
+    .location-submit, .character-submit {
+        margin-top: .5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .main-input-form-characters, .form {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .main-characters,
+    .main-locations {
+      flex-direction: column; 
+      width: 100vw; 
+      display: flex;
+    }
+    .character-inputField {
+        background-color: white;
+        margin-inline-end: 1rem;
+        border-radius: .5rem;
+        border-color: white;
+        padding: 1rem;
+        width: 31%;
+    }
+    .location-inputField {
+        background-color: white;
+        margin-inline-end: 1rem;
+        border-radius: .5rem;
+        border-color: white;
+        padding: 1rem;
+        width: 47%;
+    }
+    .character-submit, .location-submit {
+        margin-top: 1rem;
+        height: 3rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .character-inputField, .location-inputField{
+        background-color: white;
+        margin-inline-end: 1rem;
+        border-radius: .5rem;
+        border-color: white;
+        padding: 1rem;
+        width: 47%;
+    }
+    .character-submit, .location-submit {
+        margin-top: 1rem;
+        height: 3rem;
+    }
+}
+@media screen and (max-width: 385px) {
+    .character-inputField, .location-inputField{
+        background-color: white;
+        margin-inline-end: 1rem;
+        border-radius: .5rem;
+        border-color: white;
+        padding: 1rem;
+        width: 100%;
+    }
 }
