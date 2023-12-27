@@ -1,3 +1,23 @@
 @import url(form.css);
 @import url(output.css);
+<<<<<<< Updated upstream
 @import url(style.css);
+=======
+@import url(style.css);
+@import url(mediaq.css);
+
+
+
+.logoApple {
+    max-height: 4rem;
+}
+.navigationBar {
+    background-color: beige;
+    border: .1rem solid #ccc;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem;
+    width: calc(100vw - 2.5rem) ;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+}
+>>>>>>> Stashed changes
