@@ -4,6 +4,7 @@ import { DOMSelectors } from "./dom";
 const characterDataArray = [];
 const locationDataArray = [];
 
+
 /* 
 async function getCharData - What it does:
 1. Grabs the URL from the URL Converter function to extract API data.
@@ -26,12 +27,11 @@ async function getCharData(charURL) {
                 throw new Error(response.status + ". Idk what to tell you, try searching for this error on the web.");
             };
         }; 
-        console.log(response);
+        console.log(response); //Status for the response
         const characterData = await response.json();
-        console.log(characterData.results);
+        console.log(characterData.results); //Status on API data retrieval
         characterData.results.forEach(character => characterDataArray.push(character));
         console.log(characterDataArray) //Status on characterDataArray API data insert
-
         characterDataArray.forEach((character) => createCharacterCard(character));
         console.log("Character Card Created"); // Status on characterDataArray cards creation
         characterDataArray.length = 0;
@@ -40,7 +40,7 @@ async function getCharData(charURL) {
         console.log("Oh no you got the following error! " + error);
     };
 };
-async function getLocnData(locnURL) {
+const getLocationData = async function getLocnData(locnURL) {
     try {
         //Looks at the status value and produces error messages based on it.
         const response = await fetch(locnURL);
@@ -198,5 +198,3 @@ DOMSelectors.locationsForm.addEventListener('submit', function locationsURLConve
     getLocnData(locnURL);
     clearInputs();
 });
-
-//locationData.forEach((location)=>createCharacterCard(location));

@@ -1,6 +1,5 @@
 const DOMSelectors = {
     mainOutput: document.getElementById("main-output-card"),
-
     characterForm: document.getElementById("formCharacters"),
     characterPageNum: document.getElementById("q-character-pageNum-input"),
     characterName: document.getElementById("q-character-name-input"),
@@ -16,7 +15,7 @@ const DOMSelectors = {
     locationsType: document.getElementById("q-location-type-input"),
     locationsDimension: document.getElementById("q-location-dimension-input"),
     locationsSubmit: document.getElementById("q-location-submit"),
-    
+
     deleteCard: document.getElementById("deleteCharacterBtn"),
     modal: document.getElementById("characterModal"),
     closeXBtn: document.querySelector('.close'),
