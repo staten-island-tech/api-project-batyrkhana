@@ -74,12 +74,14 @@ const createCharacterCard = function(characterDataArray){
         <div class="created-character-card-data">
             <img src=${characterDataArray.image} alt="${characterDataArray.name} image" class="created-character-img">
             <h1 class="created-character-name">Character Name: ${characterDataArray.name}</h1>
-            <h2 class="created-character-gender">Gender: ${characterDataArray.gender}</h2>
-            <h2 class="created-character-location">Current Location: ${characterDataArray.location.name}</h2>
-            <h2 class="created-character-origin-name">Origin: ${characterDataArray.origin.name}</h2>
-            <h2 class="created-character-status">Status: ${characterDataArray.status}</h2>
-            <h2 class="created-character-species">Species: ${characterDataArray.species}</h2>
-            <h2 class="created-character-type">Type: ${characterDataArray.type}</h2>
+            <div class="created-character-individual-properties">
+                <h2 class="created-character-gender">Gender: ${characterDataArray.gender}</h2>
+                <h2 class="created-character-location">Current Location: ${characterDataArray.location.name}</h2>
+                <h2 class="created-character-origin-name">Origin: ${characterDataArray.origin.name}</h2>
+                <h2 class="created-character-status">Status: ${characterDataArray.status}</h2>
+                <h2 class="created-character-species">Species: ${characterDataArray.species}</h2>
+                <h2 class="created-character-type">Type: ${characterDataArray.type}</h2>
+            </div>
         </div>
         <div class="created-character-btns">
             <div class="created-character-deleteBtn">

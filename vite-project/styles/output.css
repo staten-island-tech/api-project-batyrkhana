@@ -29,7 +29,13 @@
     margin-bottom: 0.5rem;
     color: black;
 }
-
+.created-character-name {
+    height: 4rem;
+}
+.created-character-individual-properties {
+    height: 15rem;
+    margin-top: 1rem;
+}
 .deleteCharacterBtn, .infoCharacterBtn, .deleteLocationBtn, .infoLocationBtn {
     background-color: black;
     color: white;
