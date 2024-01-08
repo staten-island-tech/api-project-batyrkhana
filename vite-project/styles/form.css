@@ -15,7 +15,7 @@
     padding: .5rem 1rem;
     border-radius: .3rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 4.5rem;
     transition: background-color 0.3s ease;
     margin-top: 3.7rem;
 }
@@ -27,11 +27,12 @@
 .location-submit {
     background-color: white;
     color: black;
+    font-
     border: none;
     padding: .5rem 1rem;
     border-radius: .3rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 4.5rem;
     transition: background-color 0.3s ease;
     margin-top: 12rem;
   }
