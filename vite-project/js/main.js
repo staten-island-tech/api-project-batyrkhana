@@ -40,7 +40,7 @@ async function getCharData(charURL) {
         console.log("Oh no you got the following error! " + error);
     };
 };
-const getLocationData = async function getLocnData(locnURL) {
+async function getLocnData(locnURL) {
     try {
         //Looks at the status value and produces error messages based on it.
         const response = await fetch(locnURL);
