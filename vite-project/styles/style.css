@@ -98,4 +98,6 @@ html,body,*{
     text-decoration: none;
     cursor: pointer;
   }
-  
+  .main-header {
+    font-size: large;
+  }
